@@ -1,0 +1,136 @@
+/*
+ Theme Name:   macbay Starter Theme
+ Theme URI:    https://generatepress.com
+ Description:  macbay digital starter theme (A GeneratePress child theme)
+ Author:       Sascha Liem
+ Author URI:   https://macbay.net
+ Template:     generatepress
+ Version:      0.7
+ Changes:      Extended "PageCat" capabilities on pages-admin
+*/
+
+/* Set the main content area to a minimum of 65vh */
+#main {
+	min-height: 65vh;
+}
+
+/* Optimize Header for responsive screens */
+header.site-header {
+    padding-inline: 1rem;
+}
+header.site-header .inside-header {
+    max-width: 1200px;
+    padding-inline: 0;
+}
+
+/* Site Wrapper to set overall max with NEW 2023*/
+body {
+	background-color: var(--contrast);
+}
+
+body.full-width-content {
+    max-width: 1920px;
+    margin-left: auto;
+    margin-right: auto;
+/*    position: relative; */
+}
+
+/* Site Wrapper to set overall site max width OLD 
+.site-wrapper {
+	width: 100%;
+	max-width: 1920px;
+	background-color: var(--contrast-2);
+}*/
+
+/* HELPER CLASSES */
+
+/* Standard Shadow(s) */
+
+.shadow-standard {
+	box-shadow: 0px 5px 16px -5px rgba(33, 33, 33, 0.2);
+	transition: all .2s ease-in;
+}
+
+.shadow-standard:hover {
+	box-shadow: 0px 8px 32px 0px rgba(33, 33, 33, 0.1);
+}
+
+/* Max Width(s) */
+
+.max-width-1024 {
+	max-width: 1024px;
+}
+
+.max-width-768 {
+	max-width: 768px;
+}
+
+.max-width-640 {
+	max-width: 640px;
+}
+
+.max-width-480 {
+	max-width: 480px;
+}
+
+/* Margin Auto */
+
+.margin-auto{
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/* Position Properties */
+
+.relative{
+	position: relative;
+}
+
+.absolute{
+	position:absolute;
+	top: 0px;
+	left: 0px;
+}
+
+.sticky{
+/*	position: sticky;top: 24px; */
+	background-color: var(--base);
+	padding:15px;
+}
+
+/* Image Aspect Ratios */
+
+.aspect-1-1 img{
+    aspect-ratio: 1/1;
+	object-fit: cover;
+}
+
+.aspect-3-2 img{
+    aspect-ratio: 3/2;
+	object-fit: cover;
+}
+
+.aspect-2-3 img{
+    aspect-ratio: 2/3;
+	object-fit: cover;
+}
+
+.aspect-4-3 img{
+    aspect-ratio: 4/3;
+	object-fit: cover;
+}
+
+.aspect-3-4 img{
+    aspect-ratio: 3/4;
+	object-fit: cover;
+}
+
+.aspect-16-9 img{
+    aspect-ratio: 16/9;
+	object-fit: cover;
+}
+
+.aspect-9-16 img{
+    aspect-ratio: 9/16;
+	object-fit: cover;
+}
