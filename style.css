@@ -5,8 +5,8 @@
  Author:       Sascha Liem
  Author URI:   https://macbay.net
  Template:     generatepress
- Version:      0.7
- Changes:      Extended "PageCat" capabilities on pages-admin
+ Version:      0.8
+ Changes:      Adding Impressum Link to wp-login & Header Navigation shortcode
 */
 
 /* Set the main content area to a minimum of 65vh */
