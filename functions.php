@@ -85,11 +85,28 @@ function pages_tax_filter_posts($query){
 }
 add_filter("parse_query", "pages_tax_filter_posts");
 
-/* GP Smooth Scrolling GLOBALLY - Need to activate in Customizer */
+// GP Smooth Scrolling GLOBALLY - Need to activate in Customizer
 add_filter( 'generate_smooth_scroll_elements', function( $elements ) {
   $elements[] = 'a[href*="#"]';
   return $elements;
 } );
 
-/* GB Prevent redirect to GB-Dashboard after re-activation */
+// GB Prevent redirect to GB-Dashboard after re-activation
 add_filter( 'generateblocks_do_activation_redirect', '__return_false' );
+
+// v.0.8.0
+
+// Impressum-Link zum Privacy Policy Link auf Login-Seite hinzufügen (wp-login.php).
+add_filter( 'the_privacy_policy_link', function( $link, $privacy_policy_url ) {
+
+	return $link . '&nbsp; | &nbsp;<a href="/impressum/">Impressum</a>';
+
+}, 10, 2 );
+
+// Create shortcode [gp_nav] for Header-Navigation - from https://snippets.tdrayson.com/oskkjp
+add_shortcode( 'gp_nav', 'tct_gp_nav' );
+function tct_gp_nav( $atts ) {
+    ob_start();
+    generate_navigation_position();
+    return ob_get_clean();
+}
