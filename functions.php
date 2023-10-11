@@ -110,7 +110,10 @@ function tct_gp_nav( $atts ) {
     generate_navigation_position();
     return ob_get_clean();
 
-/* Enqueue Child Theme style.css to editor */
+/**
+* Enqueue Child Theme style.css to editor
+* Credit to https://theadminbar.com/generate-youtube-bonus
+**/
 add_filter('block_editor_settings_all', function($editor_settings) {
     // Get the URL of the child theme's style.css
     $child_theme_style_url = get_stylesheet_directory_uri() . '/style.css';
@@ -118,8 +121,6 @@ add_filter('block_editor_settings_all', function($editor_settings) {
     $editor_settings['styles'][] = array('css' => wp_remote_get($child_theme_style_url)['body']);
     return $editor_settings;
 });
-
-
 /* Enqueue Customizer CSS to editor */ 
 add_filter( 'block_editor_settings_all', function( $editor_settings ) {
     $css = wp_get_custom_css_post()->post_content;
