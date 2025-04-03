@@ -3,7 +3,7 @@
  * GeneratePress child theme functions and definitions.
  **/
 
-// v.0.8.1 - release on 2024-03-17
+// v.0.9.9 - release on 2024-12-18
 
 // added via https://theadminbar.com/generate
 
@@ -12,7 +12,6 @@ add_action('generate_before_header', 'tct_open_wrapper');
 function tct_open_wrapper(){
     echo '<div class="site-wrapper">';
 }
-
 /* Closes site wrapper div */
 add_action('generate_after_footer', 'tct_close_wrapper');
 function tct_close_wrapper(){
@@ -23,7 +22,6 @@ function tct_close_wrapper(){
 .gb-container p:last-child:last-of-type {
     margin-bottom: 0px;
 }
-
 .block-editor-block-list__layout .gb-container p:nth-last-child(2) {
     margin-bottom: 0px;
 }
