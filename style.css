@@ -25,6 +25,14 @@ header.site-header .inside-header {
     padding-inline: 0;
 }
 
+/* Tweak 3 - Remove bottom margin on last paragraph - source check functions.php */
+.gb-container p:last-child:last-of-type {
+    margin-bottom: 0px;
+}
+.block-editor-block-list__layout .gb-container p:nth-last-child(2) {
+    margin-bottom: 0px;
+}
+
 /* HELPER UTILITY CLASSES */
 
 /* Standard Shadow(s) */
