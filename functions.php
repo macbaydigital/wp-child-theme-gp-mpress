@@ -39,8 +39,7 @@ add_filter( 'block_editor_settings_all', function( $editor_settings ) {
     $css = wp_get_custom_css_post()->post_content;
     $editor_settings['styles'][] = array( 'css' => $css );
     return $editor_settings;
-} );
-}
+});
 
 /* Tweak 5 - Remove WordPress Core default block patterns */
 add_action( 'after_setup_theme', 'my_remove_patterns' );
@@ -71,6 +70,7 @@ function tct_gp_nav( $atts ) {
     ob_start();
     generate_navigation_position();
     return ob_get_clean();
+}
 
 // v.0.7.0
 
