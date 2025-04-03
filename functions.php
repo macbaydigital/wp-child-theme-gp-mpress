@@ -18,14 +18,6 @@ function tct_close_wrapper(){
     echo '</div>';
 }
 
-/* Tweak 3 - Remove bottom margin on last paragraph */
-.gb-container p:last-child:last-of-type {
-    margin-bottom: 0px;
-}
-.block-editor-block-list__layout .gb-container p:nth-last-child(2) {
-    margin-bottom: 0px;
-}
-
 /* Tweak 4- Enqueue Child Theme style.css to editor */
 add_filter('block_editor_settings_all', function($editor_settings) {
     // Get the URL of the child theme's style.css
