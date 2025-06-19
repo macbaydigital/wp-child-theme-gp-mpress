@@ -53,17 +53,6 @@ add_filter( 'the_privacy_policy_link', function( $link, $privacy_policy_url ) {
 
 }, 10, 2 );
 
-/** Create shortcode [gp_nav] for Header-Navigation
-/* Tutorial on https://snippetclub.com/insert-generatepress-primary-menu-anywhere/
-**/
-
-add_shortcode( 'gp_nav', 'tct_gp_nav' );
-function tct_gp_nav( $atts ) {
-    ob_start();
-    generate_navigation_position();
-    return ob_get_clean();
-}
-
 // v.0.7.0
 
 // Add custom taxonomy 'PageCat' for pages
