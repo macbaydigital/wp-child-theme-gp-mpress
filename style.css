@@ -5,7 +5,7 @@
  Author:       Sascha Liem
  Author URI:   https://macbay.net
  Template:     generatepress
- Version:      0.9.0
+ Version:      0.9.10
  Changes:      added tweaks from theadminbar.com/generate, re-ordered code, removed unused css
 */
 
@@ -75,3 +75,4 @@ header.site-header .inside-header {
 .no-ul, .no-ul a {
 	text-decoration: none;
 }
+
