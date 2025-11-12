@@ -3,6 +3,15 @@
  * GeneratePress child theme functions and definitions.
  **/
 
+// v.0.9.10 - release on 2025-11-12
+// Check https://cloud.typingmind.com/share/a160ddde-3caf-48ed-9c96-65b61d6381fb
+
+add_filter( 'option_wp_page_for_privacy_policy', function( $page_id ) {
+    // Hier die ID deines CPT-Eintrags „Privacy Policy“ eintragen
+    $custom_privacy_id = 3; 
+    return $custom_privacy_id;
+});
+
 // v.0.9.9 - release on 2024-12-18
 
 // added via https://theadminbar.com/generate
