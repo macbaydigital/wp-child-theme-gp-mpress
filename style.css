@@ -19,7 +19,7 @@ body{
 	max-width: 1920px;
 	min-height: 100vh;
 	margin-inline: auto;
-	background-color: var(--contrast-2, #010101);
+	background-color: var(base-2, #010101);
 	overflow-x: clip;
 }
 
