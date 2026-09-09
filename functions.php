@@ -3,29 +3,27 @@
  * GeneratePress child theme functions and definitions.
  **/
 
-// v.0.9.10 - release on 2025-11-12
+// v0.9.11 - 2026-09-09
+// Standard-Widgets im WordPress-Dashboard entfernen.
+function macbay_remove_dashboard_widgets(): void {
+	remove_meta_box( 'dashboard_site_health', 'dashboard', 'normal' );
+	remove_meta_box( 'dashboard_right_now', 'dashboard', 'normal' );
+	remove_meta_box( 'dashboard_quick_press', 'dashboard', 'side' );
+	remove_meta_box( 'dashboard_primary', 'dashboard', 'side' );
+}
+add_action( 'wp_dashboard_setup', 'macbay_remove_dashboard_widgets', 999 );
+
+// v.0.9.10 - release on 2025-11-02
+// Enable "Privacy Policy" in CPT e.g. "Legal"
 // Check https://cloud.typingmind.com/share/a160ddde-3caf-48ed-9c96-65b61d6381fb
 
 add_filter( 'option_wp_page_for_privacy_policy', function( $page_id ) {
-    // Hier die ID deines CPT-Eintrags „Privacy Policy“ eintragen
+    // WICHTIG: Hier die ID deines CPT-Eintrags „Privacy Policy“ eintragen
     $custom_privacy_id = 3; 
     return $custom_privacy_id;
 });
 
 // v.0.9.9 - release on 2024-12-18
-
-// added via https://theadminbar.com/generate
-
-/* Tweak 1 - Opens site wrapper div */
-add_action('generate_before_header', 'tct_open_wrapper');
-function tct_open_wrapper(){
-    echo '<div class="site-wrapper">';
-}
-/* Closes site wrapper div */
-add_action('generate_after_footer', 'tct_close_wrapper');
-function tct_close_wrapper(){
-    echo '</div>';
-}
 
 /* Tweak 4- Enqueue Child Theme style.css to editor */
 add_filter('block_editor_settings_all', function($editor_settings) {
